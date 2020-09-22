@@ -8,6 +8,7 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
         <!-- Styles -->
         <style>
@@ -23,7 +24,10 @@
     <body>
         <h1>Create new site</h1>
         <form action="/createsite" method="post">
-        @csrf
+            @csrf
+            <input class="bg-gray-200" type="text" id="domain" name="domain" placeholder="Domain name">
+            <input class="bg-gray-200" type="text" id="git" name="git" placeholder="git repo">
+            <input class="bg-gray-200" type="text" id="db" name="db" placeholder="Database name">
             <button>Create site</button>
         </form>
     </body>
